@@ -1,11 +1,11 @@
 Package: hwdsb
-Title: What the Package Does (One Line, Title Case)
+Title: Collection of Functions for Hamilton-Wentworth District School Board
 Version: 0.0.0.9000
 Authors@R: 
     person("David", "Kanters", , "dkanters@hwdsb.on.ca", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Description: These functions are to be used for data cleaning and management, data visualization, and report-building
+  for school- and student-level data. 
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
