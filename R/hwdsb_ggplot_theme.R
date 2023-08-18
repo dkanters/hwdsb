@@ -12,6 +12,8 @@
 #' #  hwdsb_ggplot_theme()
 hwdsb_ggplot_theme <- function () {
 
+  extrafont::loadfonts(device="win", quiet = TRUE)
+
   font <- "LegacySanITCMed"
 
   ggplot2::theme(

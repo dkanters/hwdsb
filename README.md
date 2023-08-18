@@ -21,12 +21,36 @@ devtools::install_github("dkanters/hwdsb")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+\##This is a basic example which shows how to apply the
+hwdsb_ggplot_theme to a ggplot
+
+\###Below is the plot without any formatting from the function
 
 ``` r
 library(hwdsb)
-## basic example code
+mtcars |>
+  head(3) |>
+  tibble::rownames_to_column() |>
+  ggplot2::ggplot(ggplot2::aes(x = rowname, y = mpg)) +
+  ggplot2::geom_col() +
+  ggplot2::labs(title = "Title of Plot") 
 ```
+
+<img src="man/figures/README-example-1.png" width="100%" /> \###Adding
+the sixth line defines theme parameters (colours, fonts) for the ggplot
+object.
+
+``` r
+mtcars |>
+  head(3) |>
+  tibble::rownames_to_column() |>
+  ggplot2::ggplot(ggplot2::aes(x = rowname, y = mpg)) +
+  ggplot2::geom_col() +
+  ggplot2::labs(title = "Title of Plot") + 
+  hwdsb_ggplot_theme()
+```
+
+<img src="man/figures/README-example2-1.png" width="100%" />
 
 What is special about using `README.Rmd` instead of just `README.md`?
 You can include R chunks like so:
